@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Dịch</title>
+</head>
+<body>
+<label for="string">Nhập từ: </label>
+<input type="text" id="string">
+<button onclick="transcript()">Dịch</button>
+<p id="result"></p>
+
+<script>
+    function transcript() {
+        var input = document.getElementById('string').value;
+        var array1 = [1, 2, 3, 4];
+        var array2 = ['a', 'b', 'c', 'd'];
+        var output = '';
+
+        // Kiểm tra xem input có trong mảng array1 không
+        var index = array1.indexOf(parseInt(input));
+        if (index !== -1) {
+            output = array2[index];
+        } else {
+            alert("Khum có hỉu, ko có biết.");
+            return;
+        }
+
+        document.getElementById('result').innerText = output;
+    }
+</script>
+</body>
+</html>
